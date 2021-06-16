@@ -35,7 +35,7 @@ else{
         function scroll(){
             scrollBy(0,10)
         }
-        let int = setInterval(scroll,100)
+        let int = setInterval(scroll,10)
         document.removeEventListener('keyup',handleKeyUp)
         document.addEventListener('keyup',handleKeyUp2)
         function handleKeyUp2(e){
@@ -45,5 +45,31 @@ else{
                 document.removeEventListener('keyup',handleKeyUp2)
             }
         }
+    }
+    else if(e.key =='R' && e.ctrlKey){
+        alert('Click the element that you wish to be autoclicked!');
+        (function handleClick(){
+            let event = document.onclick;
+            document.onclick = function(e){
+                if(typeof event === 'function'){
+                    event()
+                }
+                function click(){
+                    e.target.click()
+                }
+                let delay = prompt('How much delay in milliseconds do you want between clicks?')
+                let int = setInterval(click,Number.isNaN(+delay) ? 1000 : +delay)
+                document.removeEventListener('keyup',handleKeyUp)
+                document.addEventListener('keyup',handleKeyUp2)
+                function handleKeyUp2(e){
+                if(e.key === 'r'){
+                    clearInterval(int)
+                    document.addEventListener('keyup',handleKeyUp)
+                    document.removeEventListener('keyup',handleKeyUp2)
+                 }
+                }
+                document.onclick = event
+            }
+        })()
     }
 }
