@@ -2,6 +2,4 @@ Video-Shortcut-Extension
 
 This is a pretty cool, simple extension meant mainly for video elements it HTML. But trust me, there's more.
 
-For Picture-In-Picture, you have to click the shortcut: "Ctrl" + "Shift" + "P". 
-Make sure you are holding these keys at the same time, and in this order.
-However, for automatic scroll, you have to enter the shortcut "Ctrl" + "Shift" + "S" and to end it, simply click the "s" key once again
+For Picture-In-Picture, you have to click the shortcut: Ctrl + Shift + P. Make sure you are holding these keys at the same time, and in this order. However, for automatic scroll, you have to enter the shortcut Ctrl + Shift + S and to end it, simply click the S key once again. Also, for the automatic clicking, you enter the shortcut Ctrl + Shift + R and if that shortcut is not taken, you should be asked to click an element. When you clicked that element, you will then be asked to enter the number in milliseconds that you require for delay between clicks. After all that, you can end the autoclicking by clicking the R key.
